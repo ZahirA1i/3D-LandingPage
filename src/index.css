@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities; 
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+html,
+body,
+#root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(34, 4, 66);
+    background: linear-gradient(0deg, rgb(52, 19, 88) 0%, rgb(129, 6, 12) 100%);
+}
+
+#root {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+canvas {
+    touch-action: none;
+}
