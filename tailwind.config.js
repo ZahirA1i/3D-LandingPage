@@ -13,6 +13,14 @@ module.exports = {
       backgroundColor: {
         menu: "#ff0ac2",
       },
+      animation: {
+        cover: "cover 0.5s fowards ease-out"
+      },
+      keyframes: {
+        cover: {
+          "100%": { width: "100%"},
+        }
+      }
     },
   },
   plugins: [],

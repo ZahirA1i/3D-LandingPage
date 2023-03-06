@@ -46,7 +46,7 @@ const CustomMenu = (props) => {
             {menuItem.map((item, key) =>
                 <>
                     <mesh>
-                        <Html wrapperClass key={key} scale={0.7} rotation={[Math.PI / 2, 0, 0]} position={[2.6, 0.08, (key + -2) * -0.5]} transform>
+                        <Html wrapperClass key={key} scale={0.7} rotation={[Math.PI / 2, 0, 0]} position={[2.4, 0.08, (key + -2) * -0.5]} transform>
                             <div className="group relative cursor-pointer flex items-center justify-center h-[22px] text-menu font-black w-[97px] text-center text-sm hover:text-white"
                             >
                                 <div className="absolute z-[-1] h-full bg-menu w-0 right-0 block transform group-hover:animate-cover"></div>
@@ -54,7 +54,7 @@ const CustomMenu = (props) => {
                             </div>
                         </Html>
                     </mesh>
-                    <mesh scale={[1.7, 0.2, 0.4]} position={[2.6, 0.08, (key + -2) * -0.5]}>
+                    <mesh scale={[1.7, 0.2, 0.4]} position={[2.4, 0.08, (key + -2) * -0.5]}>
                         <boxBufferGeometry />
                         <meshStandardMaterial color="#ff0a65" />
                     </mesh>
@@ -63,7 +63,7 @@ const CustomMenu = (props) => {
            
             <Car1 />
             <EffectComposer>
-                <Bloom luminanceThreshold={0} luminanceSmoothing={10} height={100} />
+                <Bloom luminanceThreshold={2} luminanceSmoothing={10} height={100} />
             </EffectComposer>
             
         </group>
