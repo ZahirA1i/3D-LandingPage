@@ -1,8 +1,23 @@
 @tailwind base;
+
+@layer base {
+    h1 {
+        @apply text-[54px] font-black leading-[50px];
+    }
+
+    h2 {
+        @apply text-[24px] font-normal leading-[20px] text-[#ff0a65] tracking-widest mt-2;
+    }
+}
+
 @tailwind components;
-@tailwind utilities; 
+@tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
 
 html,
 body,
@@ -15,7 +30,7 @@ body,
 
 body {
     background: rgb(34, 4, 66);
-    background: linear-gradient(0deg, rgb(52, 19, 88) 0%, rgb(129, 6, 12) 100%);
+    background: linear-gradient(0deg, rgb(139, 25, 25) 0%, rgb(68, 33, 105) 100%);
 }
 
 #root {
