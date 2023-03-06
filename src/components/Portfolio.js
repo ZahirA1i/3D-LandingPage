@@ -1,3 +1,6 @@
+import InteractiveMenu from "./InteractiveMenu";
+
+
 const Portfolio = () => {
     return (
         <>
@@ -5,6 +8,8 @@ const Portfolio = () => {
         <h1 className="drop-shadow-md text-primary md:text-[90px]"><span className="text-[30px] font-normal">Hi,</span><br />I am Zahir</h1>
         <p className="text-white mt-8 text-[20px]">A designer from Vancouver</p>
       </div>
+      
+      <InteractiveMenu/>
         </>
     )
 }
