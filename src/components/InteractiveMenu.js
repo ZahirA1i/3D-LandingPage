@@ -20,10 +20,15 @@ const menuItem = [
 ]
 
 
-const Car = () => {
+const Car1 = () => {
     const fbx = useFBX('/assets/Mitsubishi Lancer Evolution 6.fbx')
-    return <primitive object={fbx} scale={0.020} rotation={[2.2, 2.6, 0]} />;
+    return <primitive object={fbx} scale={0.024} rotation={[2.1, 3, 0]} position={[-1.2, 1.2, 0]} />;
 };
+
+// const Car2 = () => {
+//     const fbx = useFBX('/assets/Honda NSX.fbx')
+//     return <primitive object={fbx} scale={0.002} rotation={[3.2, 3, 0]} position={[8, 3, 0]} />;
+// };
 
 const CustomMenu = (props) => {
     const ref = useRef()
@@ -38,11 +43,29 @@ const CustomMenu = (props) => {
 
     return (
         <group ref={ref} {...props} dispose={null}>
+            {menuItem.map((item, key) =>
+                <>
+                    <mesh>
+                        <Html wrapperClass key={key} scale={0.7} rotation={[Math.PI / 2, 0, 0]} position={[2.6, 0, (key + -2) * -0.5]} transform>
+                            <div className="group relative cursor-pointer flex items-center justify-center h-[22px] text-menu font-black w-[97px] text-center text-sm hover:text-white"
+                            >
+                                <div className="absolute z-[-1] h-full bg-menu w-0 right-0 block transform group-hover:animate-cover"></div>
+                                {item.label}
+                            </div>
+                        </Html>
+                    </mesh>
+                    <mesh scale={[1.7, 0.2, 0.4]} position={[2.6, 0.08, (key + -2) * -0.5]}>
+                        <boxBufferGeometry />
+                        <meshStandardMaterial color="#ff0a65" />
+                    </mesh>
+                </>
+            )}
            
-            <Car />
+            <Car1 />
             <EffectComposer>
                 <Bloom luminanceThreshold={0} luminanceSmoothing={10} height={100} />
             </EffectComposer>
+            
         </group>
     )
 }
